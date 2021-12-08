@@ -1,5 +1,6 @@
 Spaceship bob = new Spaceship();
 Star[] boba = new Star[100];
+Asteroid bobe = new Asteroid();
 
 public void setup() 
 {
@@ -14,8 +15,12 @@ public void draw()
   for(int i = 0; i < boba.length; i++){
     boba[i].starShow();
   }
+  noStroke();
   bob.show();
   bob.move();
+  stroke(#69E8A9);
+  bobe.show();
+  bobe.move();
 }
 public void keyPressed(){
      if(key == 'h'){
