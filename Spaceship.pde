@@ -27,7 +27,7 @@ class Spaceship extends Floater
      xCorners[10] = -3*2;
      yCorners[10] = 6*2;
      xCorners[11] = -4*2;
-    yCorners[11] = 6*2;
+     yCorners[11] = 6*2;
      xCorners[12] = -4*2;
      yCorners[12] = 7*2;
      xCorners[13] = 0*2;
@@ -137,4 +137,7 @@ class Spaceship extends Floater
     return myCenterY;
   }
    
+  public double getPointDirection(){
+    return myPointDirection;
+  }
 }
