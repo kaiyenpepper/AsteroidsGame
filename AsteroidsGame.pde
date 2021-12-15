@@ -23,18 +23,21 @@ public void draw()
     stroke(#24FFD1);
     bobe.get(i).show();
     bobe.get(i).move();
-    float d = dist((float)bob.getX(), (float)bob.getY(), (float)bobe.get(i).getX(), (float)bobe.get(i).getY());
-    if(d < 25){
+    for(int j = 0; j < bobi.size(); j++){
+      stroke(#FFE448);
+      bobi.get(j).move();
+      bobi.get(j).show();
+      float d = dist((float)bobi.get(j).getX(), (float)bobi.get(j).getY(), (float)bobe.get(i).getX(), (float)bobe.get(i).getY());
+      if(d < 7){
       bobe.remove(i);
+      bobi.remove(j);
+      break;
+      }
     }
   }
   noStroke();
   bob.show();
   bob.move();
-  for(int i = 0; i < bobi.size(); i++){
-    bobi.get(i).move();
-    bobi.get(i).show();
-  }
 }
 
 public void keyPressed(){
